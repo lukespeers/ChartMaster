@@ -1,0 +1,17 @@
+﻿@page
+@model ChartMaster.Pages.Songs.LyricsViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div>
+    <h4>@Html.DisplayFor(model => model.Song.Name)</h4>
+    <hr />
+    <span style="white-space: pre-line">@Model.Song.Lyrics</span>
+        
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Song?.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
